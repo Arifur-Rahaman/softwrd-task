@@ -22,7 +22,7 @@
     }
 </script>
 
-<table class="w-full table-collapse border border-grey-light">
+<table class="w-full table-collapse border border-grey-light rounded-3xl">
     <thead>
         <tr>
             <th class="text-sm text-left uppercase font-semibold text-grey-darker p-3 bg-white">Flag</th>

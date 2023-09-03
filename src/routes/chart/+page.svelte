@@ -1,15 +1,14 @@
 <script>
     import { onMount } from "svelte";
-    import axios from 'axios'
+    import axios from "axios";
     import PolarAreaChart from "../../components/PolarAreaChart.svelte";
     import Table from "../../components/Table.svelte";
-    import {countryDataStore} from '../../store'
+    import { countryDataStore } from "../../store";
 
+    let countries = null;
     const fetchCountries = async () => {
         const res = await axios.get("https://restcountries.com/v3.1/all");
-        countryDataStore.update((value)=>{
-            return res.data
-        })
+        countryDataStore.set(res.data);
     };
 
     onMount(() => {
